@@ -1,7 +1,8 @@
 /* Licensed under MIT 2023-2024. */
 package edu.kit.kastel.mcse.ardoco.core.diagramconsistency.evaluation;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -69,7 +70,7 @@ public class EvaluationTestBase {
 
     @BeforeEach
     void init(TestInfo testInfo) throws IOException {
-        File output = new File(TEST_OUTPUT + "/" + testInfo.getTestMethod().map(Method::getName).orElse("unknown"));
+        File output = new File(TEST_OUTPUT + "/" + this.getClass().getName() + "/" + testInfo.getTestMethod().map(Method::getName).orElse("unknown"));
         boolean created = output.mkdirs();
         if (created) {
             logger.info("Created output directory: {}", output.getAbsolutePath());

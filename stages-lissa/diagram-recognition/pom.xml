@@ -36,16 +36,6 @@
     </dependency>
     <dependency>
       <groupId>io.github.ardoco.core</groupId>
-      <artifactId>tests-base</artifactId>
-      <version>${revision}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.github.ardoco.core</groupId>
-      <artifactId>tests-resources</artifactId>
-      <version>${revision}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.github.ardoco.core</groupId>
       <artifactId>text-extraction</artifactId>
       <version>${revision}</version>
     </dependency>
@@ -70,5 +60,30 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+  <profiles>
+    <profile>
+      <id>test-deps</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>io.github.ardoco.core</groupId>
+          <artifactId>tests-base</artifactId>
+          <version>${revision}</version>
+          <scope>test</scope>
+        </dependency>
+        <dependency>
+          <groupId>io.github.ardoco.core</groupId>
+          <artifactId>tests-resources</artifactId>
+          <version>${revision}</version>
+          <scope>test</scope>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>deployment</id>
+      <!-- Removes not available test dependencies -->
+    </profile>
+  </profiles>
 </project>

@@ -2,10 +2,12 @@
 package edu.kit.kastel.mcse.ardoco.core.diagramconsistency.evaluation.data;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import edu.kit.kastel.mcse.ardoco.core.api.models.ArchitectureModelType;
 import edu.kit.kastel.mcse.ardoco.core.api.models.CodeModelType;
@@ -79,22 +81,17 @@ public enum DiagramProject {
      *
      * @return The diagram file.
      */
-    public File getDiagramFile() {
-        URL resource = this.getDeclaringClass().getResource(this.getPath(DIAGRAM_FILE_NAME));
-
-        if (resource == null) {
-            throw new IllegalArgumentException("Could not find diagram file for " + this.name());
-        }
-
-        return new File(resource.getFile());
+    public File getDiagramFile() throws IOException {
+        Path target = Files.createTempFile("ArDoCoDiagram", DIAGRAM_FILE_NAME);
+        this.getClass().getResourceAsStream(this.getPath(DIAGRAM_FILE_NAME)).transferTo(new FileOutputStream(target.toFile()));
+        return target.toFile();
     }
 
     /**
      * Gets the diagram file content.
      *
      * @return The text in the file.
-     * @throws IOException
-     *                     If the file could not be read.
+     * @throws IOException If the file could not be read.
      */
     public String getDiagram() throws IOException {
         return this.readFromPath(this.getPath(DIAGRAM_FILE_NAME));
@@ -104,8 +101,7 @@ public enum DiagramProject {
      * Gets the identification stage evaluation file content.
      *
      * @return The text in the file.
-     * @throws IOException
-     *                     If the file could not be read.
+     * @throws IOException If the file could not be read.
      */
     public String getIdentificationStage() throws IOException {
         return this.readFromPath(this.getPath(IDENTIFICATION_STAGE_FILE_NAME));
@@ -115,8 +111,7 @@ public enum DiagramProject {
      * Gets the linking stage evaluation file content.
      *
      * @return The text in the file.
-     * @throws IOException
-     *                     If the file could not be read.
+     * @throws IOException If the file could not be read.
      */
     public String getLinkingStage() throws IOException {
         return this.readFromPath(this.getPath(LINKING_STAGE_FILE_NAME));
@@ -126,8 +121,7 @@ public enum DiagramProject {
      * Gets the validation stage evaluation file content.
      *
      * @return The text in the file.
-     * @throws IOException
-     *                     If the file could not be read.
+     * @throws IOException If the file could not be read.
      */
     public String getValidationStage() throws IOException {
         return this.readFromPath(this.getPath(VALIDATION_STAGE_FILE_NAME));
@@ -138,7 +132,7 @@ public enum DiagramProject {
     }
 
     private String readFromPath(String path) throws IOException {
-        try (InputStream stream = this.getDeclaringClass().getResourceAsStream(path)) {
+        try (InputStream stream = this.getClass().getResourceAsStream(path)) {
             if (stream == null) {
                 throw new IOException("Could not create stream for path " + path);
             }
