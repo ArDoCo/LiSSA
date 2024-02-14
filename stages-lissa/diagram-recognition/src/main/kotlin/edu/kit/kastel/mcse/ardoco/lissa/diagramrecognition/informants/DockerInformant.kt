@@ -33,7 +33,7 @@ abstract class DockerInformant : Informant {
         @Synchronized
         protected fun createDockerManager(namespace: String): DockerManager {
             if (namespace in dockerManagerCache.keys) {
-                return dockerManagerCache[namespace]!!
+                return dockerManagerCache[namespace] ?: error("DockerManager not found in cache")
             }
             val manager =
                 if (REMOTE) {
