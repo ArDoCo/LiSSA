@@ -17,54 +17,56 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>io.github.ardoco.core</groupId>
-      <artifactId>pipeline-erid</artifactId>
-      <version>${revision}</version>
-      <scope>compile</scope>
-    </dependency>
-      <dependency>
-          <groupId>io.github.ardoco.core</groupId>
-          <artifactId>pipeline-lissa</artifactId>
-          <version>${revision}</version>
-          <scope>compile</scope>
-      </dependency>
+    <!--
       <dependency>
           <groupId>io.github.ardoco.core</groupId>
           <artifactId>diagram-consistency</artifactId>
           <version>${revision}</version>
           <scope>compile</scope>
       </dependency>
-      <dependency>
-          <groupId>io.github.ardoco.core</groupId>
-          <artifactId>diagram-connection-generator</artifactId>
-          <version>${revision}</version>
-          <scope>compile</scope>
-      </dependency>
-      <dependency>
-          <groupId>io.github.ardoco.core</groupId>
-          <artifactId>diagram-inconsistency-checker</artifactId>
-          <version>${revision}</version>
-          <scope>compile</scope>
-      </dependency>
-      <dependency>
-          <groupId>io.github.ardoco.core</groupId>
-          <artifactId>diagram-recognition</artifactId>
-          <version>${revision}</version>
-          <scope>compile</scope>
-      </dependency>
-      <dependency>
-          <groupId>io.github.ardoco.core</groupId>
-          <artifactId>tests-base</artifactId>
-          <version>${revision}</version>
-          <scope>test</scope>
-      </dependency>
-      <dependency>
-          <groupId>io.github.ardoco.core</groupId>
-          <artifactId>tests-resources</artifactId>
-          <version>${revision}</version>
-          <scope>test</scope>
-      </dependency>
+      -->
+    <dependency>
+      <groupId>io.github.ardoco.core</groupId>
+      <artifactId>diagram-connection-generator</artifactId>
+      <version>${revision}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.ardoco.core</groupId>
+      <artifactId>diagram-inconsistency-checker</artifactId>
+      <version>${revision}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.ardoco.core</groupId>
+      <artifactId>diagram-recognition</artifactId>
+      <version>${revision}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.ardoco.core</groupId>
+      <artifactId>pipeline-erid</artifactId>
+      <version>${revision}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.ardoco.core</groupId>
+      <artifactId>pipeline-lissa</artifactId>
+      <version>${revision}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.ardoco.core</groupId>
+      <artifactId>tests-base</artifactId>
+      <version>${revision}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.ardoco.core</groupId>
+      <artifactId>tests-resources</artifactId>
+      <version>${revision}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
