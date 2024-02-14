@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>io.github.ardoco.core</groupId>
+    <artifactId>parent-lissa</artifactId>
+    <version>${revision}</version>
+      <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>stages-lissa</artifactId>
+  <packaging>pom</packaging>
+    <modules>
+        <module>diagram-connection-generator</module>
+        <module>diagram-consistency</module>
+        <module>diagram-inconsistency-checker</module>
+        <module>diagram-recognition</module>
+    </modules>
+</project>
