@@ -62,4 +62,26 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>test-deps</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>io.github.ardoco.core</groupId>
+          <artifactId>diagram-connection-generator</artifactId>
+          <version>${revision}</version>
+          <type>test-jar</type>
+          <scope>test</scope>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>deployment</id>
+      <!-- Removes not available test dependencies -->
+    </profile>
+  </profiles>
 </project>

@@ -136,7 +136,7 @@ abstract class DockerInformant : Informant {
      */
     protected fun ensureReadiness() {
         val tries = 15
-        val waiting = 10000L
+        val waiting = 1000L
 
         HttpClients.createDefault().use { client ->
             for (currentTry in IntStream.range(0, tries)) {
