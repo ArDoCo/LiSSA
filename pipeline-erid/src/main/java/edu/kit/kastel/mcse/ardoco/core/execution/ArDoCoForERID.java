@@ -8,6 +8,7 @@ import java.util.SortedMap;
 
 import edu.kit.kastel.mcse.ardoco.core.api.InputDiagramData;
 import edu.kit.kastel.mcse.ardoco.core.api.models.ArchitectureModelType;
+import edu.kit.kastel.mcse.ardoco.core.common.tuple.Pair;
 import edu.kit.kastel.mcse.ardoco.core.common.util.CommonUtilities;
 import edu.kit.kastel.mcse.ardoco.core.common.util.DataRepositoryHelper;
 import edu.kit.kastel.mcse.ardoco.core.connectiongenerator.ConnectionGenerator;
@@ -20,11 +21,10 @@ import edu.kit.kastel.mcse.ardoco.core.text.providers.TextPreprocessingAgent;
 import edu.kit.kastel.mcse.ardoco.erid.diagramconnectiongenerator.DiagramConnectionGenerator;
 import edu.kit.kastel.mcse.ardoco.erid.diagraminconsistency.DiagramInconsistencyChecker;
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition;
-import edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject;
 
 public class ArDoCoForERID extends ParameterizedRunner<ArDoCoForERID.Parameters> {
-    public record Parameters(DiagramProject diagramProject, File inputText, File inputModelArchitecture, ArchitectureModelType inputArchitectureModelType,
-                             SortedMap<String, String> additionalConfigs, File outputDir) {
+    public record Parameters(List<Pair<String, File>> diagramNameXFile, File inputText, File inputModelArchitecture,
+                             ArchitectureModelType inputArchitectureModelType, SortedMap<String, String> additionalConfigs, File outputDir) {
     }
 
     public ArDoCoForERID(String projectName, Parameters parameters) {
@@ -49,7 +49,7 @@ public class ArDoCoForERID extends ParameterizedRunner<ArDoCoForERID.Parameters>
         ArCoTLModelProviderAgent arCoTLModelProviderAgent = ArCoTLModelProviderAgent.get(p.inputModelArchitecture, p.inputArchitectureModelType, null,
                 p.additionalConfigs, dataRepository);
         pipelineSteps.add(arCoTLModelProviderAgent);
-        dataRepository.addData(InputDiagramData.ID, new InputDiagramData(p.diagramProject.getDiagramData()));
+        dataRepository.addData(InputDiagramData.ID, new InputDiagramData(p.diagramNameXFile()));
         pipelineSteps.add(DiagramRecognition.get(p.additionalConfigs, dataRepository));
         pipelineSteps.add(RecommendationGenerator.get(p.additionalConfigs, dataRepository));
         pipelineSteps.add(new DiagramConnectionGenerator(p.additionalConfigs, dataRepository));

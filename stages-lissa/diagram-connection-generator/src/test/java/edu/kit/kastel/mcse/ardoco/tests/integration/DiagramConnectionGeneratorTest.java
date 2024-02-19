@@ -31,13 +31,13 @@ import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.TraceType;
 import edu.kit.kastel.mcse.ardoco.core.data.DataRepository;
 import edu.kit.kastel.mcse.ardoco.core.execution.runner.AnonymousRunner;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.helper.StageTest;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.results.ExpectedResults;
 import edu.kit.kastel.mcse.ardoco.erid.api.diagramconnectiongenerator.DiagramConnectionStates;
 import edu.kit.kastel.mcse.ardoco.erid.diagramconnectiongenerator.DiagramConnectionGenerator;
 import edu.kit.kastel.mcse.ardoco.tests.PreTestRunner;
 import edu.kit.kastel.mcse.ardoco.tests.Results;
-import edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject;
-import edu.kit.kastel.mcse.ardoco.tests.eval.StageTest;
 
 /**
  * This class is used for evaluating ERID's diagram-to-sentences TLR capabilities using the manually extracted diagrams

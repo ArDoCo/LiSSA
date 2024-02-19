@@ -12,9 +12,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import edu.kit.kastel.mcse.ardoco.core.data.DataRepository;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.results.ExpectedResults;
 import edu.kit.kastel.mcse.ardoco.tests.PreTestRunner;
-import edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject;
 
 /**
  * This class is used for evaluating ERID's diagram-to-sentences TLR capabilities using the automatically extracted diagrams

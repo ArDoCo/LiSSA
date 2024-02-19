@@ -23,6 +23,8 @@ import edu.kit.kastel.mcse.ardoco.core.execution.runner.AnonymousRunner;
 import edu.kit.kastel.mcse.ardoco.core.models.agents.ArCoTLModelProviderAgent;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep;
 import edu.kit.kastel.mcse.ardoco.core.recommendationgenerator.RecommendationGenerator;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.helper.StageTest;
 import edu.kit.kastel.mcse.ardoco.core.text.providers.TextPreprocessingAgent;
 import edu.kit.kastel.mcse.ardoco.core.textextraction.TextExtraction;
 import edu.kit.kastel.mcse.ardoco.erid.api.diagraminconsistency.DiagramInconsistencyStates;
@@ -31,8 +33,6 @@ import edu.kit.kastel.mcse.ardoco.erid.diagraminconsistency.types.MDEInconsisten
 import edu.kit.kastel.mcse.ardoco.erid.diagraminconsistency.types.MTDEInconsistency;
 import edu.kit.kastel.mcse.ardoco.erid.diagramrecognition.DiagramRecognitionMock;
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition;
-import edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject;
-import edu.kit.kastel.mcse.ardoco.tests.eval.StageTest;
 
 class DiagramInconsistencyCheckerTest extends StageTest<DiagramInconsistencyChecker, DiagramProject, DiagramInconsistencyCheckerTest.Results> {
     private static final Logger logger = LoggerFactory.getLogger(DiagramInconsistencyCheckerTest.class);

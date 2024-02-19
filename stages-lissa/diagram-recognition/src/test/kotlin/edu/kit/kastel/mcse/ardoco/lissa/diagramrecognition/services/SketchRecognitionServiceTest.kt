@@ -4,9 +4,9 @@ import edu.kit.kastel.mcse.ardoco.core.api.InputDiagramData
 import edu.kit.kastel.mcse.ardoco.core.api.diagramrecognition.Classification
 import edu.kit.kastel.mcse.ardoco.core.api.diagramrecognition.DiagramRecognitionState
 import edu.kit.kastel.mcse.ardoco.core.data.DataRepository
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagrams
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition
 import edu.kit.kastel.mcse.ardoco.lissa.diagramrecognition.visualize
-import edu.kit.kastel.mcse.ardoco.tests.eval.GoldStandardDiagrams
 import org.eclipse.collections.api.factory.SortedMaps
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assumptions

@@ -15,8 +15,8 @@ import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.DiagramTextTraceLin
 import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.DiagramWordTraceLink;
 import edu.kit.kastel.mcse.ardoco.core.api.text.Text;
 import edu.kit.kastel.mcse.ardoco.core.data.GlobalConfiguration;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.results.ExpectedResults;
-import edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject;
 
 public record Results(DiagramProject project, SortedSet<DiagramWordTraceLink> truePositives, SortedSet<DiagramWordTraceLink> falsePositives,
                       SortedSet<DiagramGoldStandardTraceLink> falseNegatives, long TN, ExpectedResults expectedResults, SortedSet<DiagramWordTraceLink> all)

@@ -20,6 +20,7 @@ import edu.kit.kastel.mcse.ardoco.core.execution.runner.ArDoCoRunner;
 import edu.kit.kastel.mcse.ardoco.core.models.agents.ArCoTLModelProviderAgent;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep;
 import edu.kit.kastel.mcse.ardoco.core.recommendationgenerator.RecommendationGenerator;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagramsWithTLR;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.results.ExpectedResults;
 import edu.kit.kastel.mcse.ardoco.core.tests.integration.SadSamTraceabilityLinkRecoveryEvaluation;
 import edu.kit.kastel.mcse.ardoco.core.text.providers.TextPreprocessingAgent;
@@ -30,7 +31,6 @@ import edu.kit.kastel.mcse.ardoco.erid.diagramconnectiongenerator.DiagramConnect
 import edu.kit.kastel.mcse.ardoco.erid.diagraminconsistency.DiagramInconsistencyChecker;
 import edu.kit.kastel.mcse.ardoco.erid.diagramrecognition.DiagramRecognitionMock;
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition;
-import edu.kit.kastel.mcse.ardoco.tests.eval.GoldStandardDiagramsWithTLR;
 
 /**
  * Pipeline definition for the SAD SAM TLR evaluation using ERID with and without the diagram recognition mock.

@@ -11,10 +11,10 @@ import edu.kit.kastel.mcse.ardoco.core.common.util.wordsim.UnicodeCharacterMatch
 import edu.kit.kastel.mcse.ardoco.core.common.util.wordsim.WordSimUtils;
 import edu.kit.kastel.mcse.ardoco.core.data.DataRepository;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.ExecutionStage;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagrams;
 import edu.kit.kastel.mcse.ardoco.erid.diagramrecognition.agents.DiagramDisambiguationAgent;
 import edu.kit.kastel.mcse.ardoco.erid.diagramrecognition.agents.DiagramReferenceAgent;
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognitionStateImpl;
-import edu.kit.kastel.mcse.ardoco.tests.eval.GoldStandardDiagrams;
 
 /**
  * This stage is responsible for mocking the [edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition] stage. It populates the [DiagramRecognitionState] using the

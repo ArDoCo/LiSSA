@@ -16,13 +16,13 @@ import edu.kit.kastel.mcse.ardoco.core.execution.runner.ParameterizedRunner;
 import edu.kit.kastel.mcse.ardoco.core.models.agents.ArCoTLModelProviderAgent;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep;
 import edu.kit.kastel.mcse.ardoco.core.recommendationgenerator.RecommendationGenerator;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject;
 import edu.kit.kastel.mcse.ardoco.core.text.providers.TextPreprocessingAgent;
 import edu.kit.kastel.mcse.ardoco.core.textextraction.DiagramBackedTextStateStrategy;
 import edu.kit.kastel.mcse.ardoco.core.textextraction.TextExtraction;
 import edu.kit.kastel.mcse.ardoco.core.textextraction.TextStateImpl;
 import edu.kit.kastel.mcse.ardoco.erid.diagramrecognition.DiagramRecognitionMock;
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition;
-import edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject;
 
 public class PreTestRunner extends ParameterizedRunner<PreTestRunner.Parameters> {
     public PreTestRunner(String projectName, Parameters parameters) {

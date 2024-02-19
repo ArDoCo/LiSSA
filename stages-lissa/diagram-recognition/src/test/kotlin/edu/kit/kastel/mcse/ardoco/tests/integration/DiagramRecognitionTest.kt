@@ -10,10 +10,10 @@ import edu.kit.kastel.mcse.ardoco.core.data.DataRepository
 import edu.kit.kastel.mcse.ardoco.core.execution.runner.AnonymousRunner
 import edu.kit.kastel.mcse.ardoco.core.models.agents.ArCoTLModelProviderAgent
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagrams
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.helper.StageTest
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition
-import edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject
-import edu.kit.kastel.mcse.ardoco.tests.eval.GoldStandardDiagrams
-import edu.kit.kastel.mcse.ardoco.tests.eval.StageTest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Order
@@ -28,7 +28,7 @@ internal class DiagramRecognitionTest :
     ) {
     @DisplayName("Evaluate Diagram Recognition")
     @ParameterizedTest(name = "{0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getNonHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getNonHistoricalProjects")
     @Order(1)
     fun evaluateNonHistoricalDiagramRecognition(project: DiagramProject) {
         val result = runComparable(project)
@@ -45,7 +45,7 @@ internal class DiagramRecognitionTest :
 
     @DisplayName("Evaluate Diagram Recognition (Historical)")
     @ParameterizedTest(name = "{0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getHistoricalProjects")
     @Order(2)
     fun evaluateHistoricalDiagramRecognition(project: DiagramProject) {
         val result = runComparable(project)

@@ -21,10 +21,10 @@ import edu.kit.kastel.mcse.ardoco.core.data.DataRepository;
 import edu.kit.kastel.mcse.ardoco.core.execution.runner.AnonymousRunner;
 import edu.kit.kastel.mcse.ardoco.core.models.agents.ArCoTLModelProviderAgent;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagrams;
+import edu.kit.kastel.mcse.ardoco.core.tests.eval.helper.StageTest;
 import edu.kit.kastel.mcse.ardoco.erid.diagramrecognition.DiagramRecognitionMock;
-import edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject;
-import edu.kit.kastel.mcse.ardoco.tests.eval.GoldStandardDiagrams;
-import edu.kit.kastel.mcse.ardoco.tests.eval.StageTest;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class DiagramRecognitionMockTest extends StageTest<DiagramRecognitionMock, GoldStandardDiagrams, DiagramRecognitionMockTest.DiagramRecognitionResult> {
