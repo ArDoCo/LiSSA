@@ -35,7 +35,7 @@ class DiagramRecognitionMockTest extends StageTest<DiagramRecognitionMock, GoldS
 
     @DisplayName("Evaluate Diagram Recognition")
     @ParameterizedTest(name = "{0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getNonHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getNonHistoricalProjects")
     @Order(1)
     @Disabled
     public void evaluateNonHistoricalDiagramRecognition(DiagramProject project) {
@@ -44,7 +44,7 @@ class DiagramRecognitionMockTest extends StageTest<DiagramRecognitionMock, GoldS
 
     @DisplayName("Evaluate Diagram Recognition (Historical)")
     @ParameterizedTest(name = "{0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getHistoricalProjects")
     @Order(2)
     @Disabled
     public void evaluateHistoricalDiagramRecognition(DiagramProject project) {

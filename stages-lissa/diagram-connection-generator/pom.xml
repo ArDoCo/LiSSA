@@ -23,9 +23,15 @@
     </dependency>
     <dependency>
       <groupId>io.github.ardoco.core</groupId>
-      <artifactId>pipeline-tlr</artifactId>
+      <artifactId>model-provider</artifactId>
       <version>${revision}</version>
-      <scope>compile</scope>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.ardoco.core</groupId>
+      <artifactId>recommendation-generator</artifactId>
+      <version>${revision}</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>

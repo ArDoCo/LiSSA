@@ -27,7 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import edu.kit.kastel.mcse.ardoco.core.api.PreprocessingData;
-import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.TraceType;
+import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.diagrams.TraceType;
 import edu.kit.kastel.mcse.ardoco.core.data.DataRepository;
 import edu.kit.kastel.mcse.ardoco.core.execution.runner.AnonymousRunner;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep;
@@ -131,7 +131,7 @@ class DiagramConnectionGeneratorTest extends StageTest<DiagramConnectionGenerato
 
     @DisplayName("Evaluate Diagram Connection Generator")
     @ParameterizedTest(name = "{0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getNonHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getNonHistoricalProjects")
     @Order(1)
     void evaluateNonHistoricalDiagramRecognition(DiagramProject project) {
         assertTrue(runComparable(project).asExpected());
@@ -139,7 +139,7 @@ class DiagramConnectionGeneratorTest extends StageTest<DiagramConnectionGenerato
 
     @DisplayName("Evaluate Diagram Connection Generator (Historical)")
     @ParameterizedTest(name = "{0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getHistoricalProjects")
     @Order(2)
     void evaluateHistoricalDiagramRecognition(DiagramProject project) {
         assertTrue(runComparable(project).asExpected());

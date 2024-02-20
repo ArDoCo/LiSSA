@@ -69,7 +69,7 @@
           <groupId>io.github.ardoco.core</groupId>
           <artifactId>tests-base</artifactId>
           <version>${revision}</version>
-          <scope>compile</scope>
+          <scope>test</scope>
         </dependency>
       </dependencies>
     </profile>

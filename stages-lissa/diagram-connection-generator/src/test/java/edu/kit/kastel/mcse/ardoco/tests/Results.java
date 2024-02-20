@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.DiagramGoldStandardTraceLink;
-import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.DiagramTextTraceLink;
-import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.DiagramWordTraceLink;
+import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.diagrams.DiagramGoldStandardTraceLink;
+import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.diagrams.DiagramTextTraceLink;
+import edu.kit.kastel.mcse.ardoco.core.api.models.tracelinks.diagrams.DiagramWordTraceLink;
 import edu.kit.kastel.mcse.ardoco.core.api.text.Text;
 import edu.kit.kastel.mcse.ardoco.core.data.GlobalConfiguration;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject;
