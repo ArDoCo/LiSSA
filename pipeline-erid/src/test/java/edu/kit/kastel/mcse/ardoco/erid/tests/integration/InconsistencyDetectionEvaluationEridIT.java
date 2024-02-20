@@ -24,7 +24,7 @@ public class InconsistencyDetectionEvaluationEridIT extends InconsistencyDetecti
 
     @DisplayName("Evaluating MME-Inconsistency Detection")
     @ParameterizedTest(name = "Evaluating MME-Inconsistency for {0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getNonHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getNonHistoricalProjects")
     @Order(1)
     @Override
     protected void missingModelElementInconsistencyIT(GoldStandardProject goldStandardProject) {
@@ -37,7 +37,7 @@ public class InconsistencyDetectionEvaluationEridIT extends InconsistencyDetecti
     @EnabledIfEnvironmentVariable(named = "testHistoric", matches = ".*")
     @DisplayName("Evaluating MME-Inconsistency Detection (Historic)")
     @ParameterizedTest(name = "Evaluating MME-Inconsistency for {0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getHistoricalProjects")
     @Order(2)
     @Override
     protected void missingModelElementInconsistencyHistoricIT(GoldStandardProject goldStandardProject) {
@@ -50,7 +50,7 @@ public class InconsistencyDetectionEvaluationEridIT extends InconsistencyDetecti
     @EnabledIfEnvironmentVariable(named = "testBaseline", matches = ".*")
     @DisplayName("Evaluating MME-Inconsistency Detection Baseline")
     @ParameterizedTest(name = "Evaluating Baseline for {0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getNonHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getNonHistoricalProjects")
     @Order(5)
     @Override
     protected void missingModelElementInconsistencyBaselineIT(GoldStandardProject goldStandardProject) {
@@ -60,7 +60,7 @@ public class InconsistencyDetectionEvaluationEridIT extends InconsistencyDetecti
     @EnabledIfEnvironmentVariable(named = "testBaseline", matches = ".*")
     @DisplayName("Evaluating MME-Inconsistency Detection Baseline (Historical)")
     @ParameterizedTest(name = "Evaluating Baseline for {0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getHistoricalProjects")
     @Order(6)
     @Override
     protected void missingModelElementInconsistencyBaselineHistoricIT(GoldStandardProject goldStandardProject) {
@@ -74,7 +74,7 @@ public class InconsistencyDetectionEvaluationEridIT extends InconsistencyDetecti
      */
     @DisplayName("Evaluate Inconsistency Analyses For MissingTextForModelElementInconsistencies")
     @ParameterizedTest(name = "Evaluating UME-inconsistency for {0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getNonHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getNonHistoricalProjects")
     @Order(10)
     @Override
     protected void missingTextInconsistencyIT(GoldStandardProject goldStandardProject) {
@@ -84,7 +84,7 @@ public class InconsistencyDetectionEvaluationEridIT extends InconsistencyDetecti
     @EnabledIfEnvironmentVariable(named = "testHistoric", matches = ".*")
     @DisplayName("Evaluate Inconsistency Analyses For MissingTextForModelElementInconsistencies (Historical)")
     @ParameterizedTest(name = "Evaluating UME-inconsistency for {0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getHistoricalProjects")
     @Order(11)
     @Override
     protected void missingTextInconsistencyHistoricIT(GoldStandardProject goldStandardProject) {

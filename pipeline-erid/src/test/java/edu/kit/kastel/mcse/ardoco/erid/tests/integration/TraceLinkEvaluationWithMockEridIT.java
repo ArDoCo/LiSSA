@@ -19,7 +19,7 @@ import edu.kit.kastel.mcse.ardoco.core.tests.integration.TraceLinkEvaluationIT;
 class TraceLinkEvaluationWithMockEridIT extends TraceLinkEvaluationIT<GoldStandardDiagramsWithTLR> {
     @DisplayName("Evaluate SAD-SAM")
     @ParameterizedTest(name = "{0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getNonHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getNonHistoricalProjects")
     @Order(20)
     @Override
     protected void evaluateSadSamTlrIT(GoldStandardDiagramsWithTLR project) {
@@ -30,7 +30,7 @@ class TraceLinkEvaluationWithMockEridIT extends TraceLinkEvaluationIT<GoldStanda
 
     @DisplayName("Evaluate TLR (Historical)")
     @ParameterizedTest(name = "{0}")
-    @MethodSource("edu.kit.kastel.mcse.ardoco.tests.eval.DiagramProject#getHistoricalProjects")
+    @MethodSource("edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject#getHistoricalProjects")
     @Order(21)
     @Override
     protected void evaluateSadSamTlrHistoricalIT(GoldStandardDiagramsWithTLR project) {
