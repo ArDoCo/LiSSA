@@ -1,7 +1,10 @@
 /* Licensed under MIT 2023-2024. */
 package edu.kit.kastel.mcse.ardoco.core.tests.architecture;
 
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.*;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.fields;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.methods;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 import java.lang.annotation.Annotation;
 import java.util.HashMap;
@@ -40,7 +43,7 @@ import com.tngtech.archunit.lang.SimpleConditionEvent;
 import edu.kit.kastel.mcse.ardoco.core.architecture.Deterministic;
 import edu.kit.kastel.mcse.ardoco.core.architecture.NoHashCodeEquals;
 
-@AnalyzeClasses(packages = "edu.kit.kastel.mcse.ardoco.core")
+@AnalyzeClasses(packages = "edu.kit.kastel.mcse.ardoco")
 public class DeterministicArDoCoTest {
 
     private static final Logger logger = LoggerFactory.getLogger(DeterministicArDoCoTest.class);

@@ -27,7 +27,7 @@ import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.lang.ConditionEvents;
 import com.tngtech.archunit.lang.SimpleConditionEvent;
 
-@AnalyzeClasses(packages = "edu.kit.kastel.mcse.ardoco.core")
+@AnalyzeClasses(packages = "edu.kit.kastel.mcse.ardoco")
 public class ArchitectureTest {
     @ArchTest
     public static final ArchRule noDependencyOnExecution = classes().that()
@@ -193,16 +193,6 @@ public class ArchitectureTest {
     private static final Predicate<? super JavaClass> erasureIsSerializableShallow = (JavaClass javaClass) -> {
         return javaClass.isPrimitive() || javaClass.isAssignableTo(Serializable.class) || isContainer.test(javaClass);
     };
-
-    private static LinkedHashSet<JavaClass> isParameterizedGeneric(JavaField javaField) {
-        var javaType = javaField.getType();
-        if (javaType instanceof JavaParameterizedType javaParameterizedType) {
-            javaParameterizedType.getActualTypeArguments();
-        }
-        var set = new LinkedHashSet<>(javaType.getAllInvolvedRawTypes());
-        set.remove(javaType);
-        return set;
-    }
 
     /**
      * Returns all types of a field, except the (outer) type of the field itself. Generic type variables are not considered.
