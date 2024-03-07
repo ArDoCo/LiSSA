@@ -5,21 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.kit.kastel.mcse.ardoco.core.api.InputDiagramData;
-import edu.kit.kastel.mcse.ardoco.core.connectiongenerator.ConnectionGenerator;
 import edu.kit.kastel.mcse.ardoco.core.data.DataRepository;
 import edu.kit.kastel.mcse.ardoco.core.execution.runner.AnonymousRunner;
-import edu.kit.kastel.mcse.ardoco.core.inconsistency.InconsistencyChecker;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep;
-import edu.kit.kastel.mcse.ardoco.core.recommendationgenerator.RecommendationGenerator;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardProject;
-import edu.kit.kastel.mcse.ardoco.core.tests.eval.baseline.InconsistencyBaseline;
-import edu.kit.kastel.mcse.ardoco.core.tests.integration.inconsistencyhelper.HoldBackArCoTLModelProvider;
-import edu.kit.kastel.mcse.ardoco.core.tests.integration.inconsistencyhelper.HoldBackRunResultsProducer;
 import edu.kit.kastel.mcse.ardoco.erid.diagramconnectiongenerator.DiagramConnectionGenerator;
 import edu.kit.kastel.mcse.ardoco.erid.diagraminconsistency.DiagramInconsistencyChecker;
 import edu.kit.kastel.mcse.ardoco.erid.diagramrecognition.DiagramRecognitionMock;
+import edu.kit.kastel.mcse.ardoco.id.InconsistencyChecker;
+import edu.kit.kastel.mcse.ardoco.id.tests.eval.baseline.InconsistencyBaseline;
+import edu.kit.kastel.mcse.ardoco.id.tests.integration.inconsistencyhelper.HoldBackArCoTLModelProvider;
+import edu.kit.kastel.mcse.ardoco.id.tests.integration.inconsistencyhelper.HoldBackRunResultsProducer;
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition;
+import edu.kit.kastel.mcse.ardoco.tlr.connectiongenerator.ConnectionGenerator;
+import edu.kit.kastel.mcse.ardoco.tlr.recommendationgenerator.RecommendationGenerator;
 
 /**
  * {@link HoldBackRunResultsProducer} that has been adapted to use the ERID pipeline with the {@link DiagramRecognition} or {@link DiagramRecognitionMock}

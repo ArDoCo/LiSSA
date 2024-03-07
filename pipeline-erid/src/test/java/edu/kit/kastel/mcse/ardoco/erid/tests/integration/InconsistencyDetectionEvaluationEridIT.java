@@ -10,8 +10,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagramsWithTLR;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardProject;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.Project;
-import edu.kit.kastel.mcse.ardoco.core.tests.integration.InconsistencyDetectionEvaluationIT;
-import edu.kit.kastel.mcse.ardoco.core.tests.integration.inconsistencyhelper.HoldBackRunResultsProducer;
+import edu.kit.kastel.mcse.ardoco.id.tests.integration.InconsistencyDetectionEvaluationIT;
+import edu.kit.kastel.mcse.ardoco.id.tests.integration.inconsistencyhelper.HoldBackRunResultsProducer;
 
 /**
  * Performs the inconsistency detection using ERID with the diagram recognition.

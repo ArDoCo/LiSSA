@@ -4,21 +4,19 @@
   <parent>
     <groupId>io.github.ardoco.core</groupId>
     <artifactId>parent</artifactId>
-    <version>0.42.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
   </parent>
+  <groupId>io.github.ardoco.lissa</groupId>
   <artifactId>parent-lissa</artifactId>
   <version>${revision}</version>
   <packaging>pom</packaging>
 
-  <name>ArDoCo (Core) - The Consistency Analyzer: LiSSA</name>
+  <name>ArDoCo - The Consistency Analyzer: LiSSA</name>
   <description>The goal of this project is to connect architecture documentation and models while identifying missing
         or deviating elements (inconsistencies). An element can be any representable item of the model, like a component
         or a relation. To do so, we first create trace links and then make use of them and other information to identify
         inconsistencies. ArDoCo is actively developed by researchers of the Modelling for Continuous Software
-        Engineering (MCSE) group of KASTEL - Institute of Information Security and Dependability at the KIT.
-        This work was supported by funding from the topic Engineering Secure Systems of the Helmholtz Association (HGF)
-        and by KASTEL Security Research Labs
-        (46.23.01).</description>
+        Engineering (MCSE) group of KASTEL - Institute of Information Security and Dependability at the KIT.</description>
   <url>https://github.com/ArDoCo/LiSSA</url>
   <licenses>
     <license>
@@ -74,7 +72,7 @@
   </distributionManagement>
 
   <properties>
-    <revision>0.42.0-SNAPSHOT</revision>
+    <revision>1.0.0-SNAPSHOT</revision>
     <ardoco.version>${revision}</ardoco.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

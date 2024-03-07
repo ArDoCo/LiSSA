@@ -12,25 +12,25 @@ import edu.kit.kastel.mcse.ardoco.core.api.output.ArDoCoResult;
 import edu.kit.kastel.mcse.ardoco.core.api.textextraction.TextState;
 import edu.kit.kastel.mcse.ardoco.core.common.util.CommonUtilities;
 import edu.kit.kastel.mcse.ardoco.core.common.util.DataRepositoryHelper;
-import edu.kit.kastel.mcse.ardoco.core.connectiongenerator.ConnectionGenerator;
 import edu.kit.kastel.mcse.ardoco.core.data.DataRepository;
 import edu.kit.kastel.mcse.ardoco.core.execution.ConfigurationHelper;
 import edu.kit.kastel.mcse.ardoco.core.execution.runner.AnonymousRunner;
 import edu.kit.kastel.mcse.ardoco.core.execution.runner.ArDoCoRunner;
-import edu.kit.kastel.mcse.ardoco.core.models.agents.ArCoTLModelProviderAgent;
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep;
-import edu.kit.kastel.mcse.ardoco.core.recommendationgenerator.RecommendationGenerator;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagramsWithTLR;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.results.ExpectedResults;
-import edu.kit.kastel.mcse.ardoco.core.tests.integration.SadSamTraceabilityLinkRecoveryEvaluation;
-import edu.kit.kastel.mcse.ardoco.core.text.providers.TextPreprocessingAgent;
-import edu.kit.kastel.mcse.ardoco.core.textextraction.DiagramBackedTextStateStrategy;
-import edu.kit.kastel.mcse.ardoco.core.textextraction.TextExtraction;
-import edu.kit.kastel.mcse.ardoco.core.textextraction.TextStateImpl;
 import edu.kit.kastel.mcse.ardoco.erid.diagramconnectiongenerator.DiagramConnectionGenerator;
 import edu.kit.kastel.mcse.ardoco.erid.diagraminconsistency.DiagramInconsistencyChecker;
 import edu.kit.kastel.mcse.ardoco.erid.diagramrecognition.DiagramRecognitionMock;
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition;
+import edu.kit.kastel.mcse.ardoco.tlr.connectiongenerator.ConnectionGenerator;
+import edu.kit.kastel.mcse.ardoco.tlr.models.agents.ArCoTLModelProviderAgent;
+import edu.kit.kastel.mcse.ardoco.tlr.recommendationgenerator.RecommendationGenerator;
+import edu.kit.kastel.mcse.ardoco.tlr.tests.integration.SadSamTraceabilityLinkRecoveryEvaluation;
+import edu.kit.kastel.mcse.ardoco.tlr.text.providers.TextPreprocessingAgent;
+import edu.kit.kastel.mcse.ardoco.tlr.textextraction.DiagramBackedTextStateStrategy;
+import edu.kit.kastel.mcse.ardoco.tlr.textextraction.TextExtraction;
+import edu.kit.kastel.mcse.ardoco.tlr.textextraction.TextStateImpl;
 
 /**
  * Pipeline definition for the SAD SAM TLR evaluation using ERID with and without the diagram recognition mock.

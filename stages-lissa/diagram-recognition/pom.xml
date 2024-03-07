@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>io.github.ardoco.core</groupId>
+    <groupId>io.github.ardoco.lissa</groupId>
     <artifactId>stages-lissa</artifactId>
     <version>${revision}</version>
   </parent>
@@ -29,18 +29,18 @@
       <version>${revision}</version>
     </dependency>
     <dependency>
-      <groupId>io.github.ardoco.core</groupId>
+      <groupId>io.github.ardoco.tlr</groupId>
       <artifactId>model-provider</artifactId>
       <version>${revision}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>io.github.ardoco.core</groupId>
+      <groupId>io.github.ardoco.tlr</groupId>
       <artifactId>text-extraction</artifactId>
       <version>${revision}</version>
     </dependency>
     <dependency>
-      <groupId>io.github.ardoco.core</groupId>
+      <groupId>io.github.ardoco.tlr</groupId>
       <artifactId>text-preprocessing</artifactId>
       <version>${revision}</version>
     </dependency>

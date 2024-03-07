@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.CodeProject;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagramsWithTLR;
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.Project;
-import edu.kit.kastel.mcse.ardoco.core.tests.integration.TraceLinkEvaluationIT;
+import edu.kit.kastel.mcse.ardoco.tlr.tests.integration.TraceLinkEvaluationIT;
 
 /**
  * Performs the SAD SAM TLR using ERID with the diagram recognition mock.
