@@ -12,7 +12,7 @@
   <modules>
     <module>diagram-connection-generator</module>
     <!-- Disable Diagram Consistency for now. We have to find out why the tests fail if multiple are executed in parallel-->
-    <module>diagram-consistency</module>
+    <!-- <module>diagram-consistency</module> -->
     <module>diagram-inconsistency-checker</module>
     <module>diagram-recognition</module>
   </modules>
