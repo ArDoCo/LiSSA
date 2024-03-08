@@ -2,7 +2,6 @@ package edu.kit.kastel.mcse.ardoco.tlr.textextraction
 
 import edu.kit.kastel.mcse.ardoco.core.api.diagramrecognition.Box
 import edu.kit.kastel.mcse.ardoco.core.api.diagramrecognition.Diagram
-import edu.kit.kastel.mcse.ardoco.core.api.diagramrecognition.DiagramElement
 import edu.kit.kastel.mcse.ardoco.core.api.diagramrecognition.DiagramUtil
 import edu.kit.kastel.mcse.ardoco.core.api.text.Word
 import edu.kit.kastel.mcse.ardoco.core.api.textextraction.MappingKind
