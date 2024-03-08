@@ -8,12 +8,12 @@ import edu.kit.kastel.mcse.ardoco.core.api.models.ArchitectureModelType
 import edu.kit.kastel.mcse.ardoco.core.common.util.Comparators
 import edu.kit.kastel.mcse.ardoco.core.data.DataRepository
 import edu.kit.kastel.mcse.ardoco.core.execution.runner.AnonymousRunner
-import edu.kit.kastel.mcse.ardoco.core.models.agents.ArCoTLModelProviderAgent
 import edu.kit.kastel.mcse.ardoco.core.pipeline.AbstractPipelineStep
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.DiagramProject
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.GoldStandardDiagrams
 import edu.kit.kastel.mcse.ardoco.core.tests.eval.helper.StageTest
 import edu.kit.kastel.mcse.ardoco.lissa.DiagramRecognition
+import edu.kit.kastel.mcse.ardoco.tlr.models.agents.ArCoTLModelProviderAgent
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Order
