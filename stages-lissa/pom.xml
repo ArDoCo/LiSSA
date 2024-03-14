@@ -15,5 +15,6 @@
     <!-- <module>diagram-consistency</module> -->
     <module>diagram-inconsistency-checker</module>
     <module>diagram-recognition</module>
+    <module>diagram-to-architecture</module>
   </modules>
 </project>
